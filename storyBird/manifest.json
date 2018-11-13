@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "storyBird",
+  "description": "更改不可选择的文本",
+  "version": "1.0",
+
+  "permissions": [
+    "https://storybird.com/"
+  ],
+  "browser_action": {
+    "default_title" : "故事鸟"
+
+  },
+  "content_scripts": [
+    {
+      "matches" : ["*://storybird.com/*"],
+      "js"      : ["core.js"],
+      "all_frames" : true
+    }
+  ]
+}
